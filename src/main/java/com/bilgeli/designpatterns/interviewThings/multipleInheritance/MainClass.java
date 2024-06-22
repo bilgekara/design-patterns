@@ -5,5 +5,11 @@ public class MainClass {
         ImplementingClass ce= new ImplementingClass();
         ce.method();
         ce.interfaceDefault();
+
+        Interface1.interfaceStatic();
+        int value = Interface1.VALUE;
+
+        // this is inside interface 2
+        ce.parentMethod();
     }
 }

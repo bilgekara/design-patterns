@@ -6,6 +6,9 @@ public class ImplementingClass implements Interface1, Interface2 {
         System.out.println("inside class1");
     }
 
+    /*@Override
+    public String,Boolean differentReturnType() {return null;} */
+
     @Override
     public void interface2() {
         System.out.println("inside interface2");
@@ -22,5 +25,9 @@ public class ImplementingClass implements Interface1, Interface2 {
         Interface2.super.interfaceDefault();
         //System.out.println("inside overriding interfaceDefault");
 
+    }
+    @Override
+    public void parentMethod() {
+        System.out.println("This came from ParentInterface to Interface2");
     }
 }
