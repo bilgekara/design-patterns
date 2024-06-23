@@ -80,5 +80,67 @@ public class DesignpatternsApplication {
 		- interface : yapılabilirlik sağlar
 		 */
 
+		/* List,Queue,Set
+		   List : ArrayList, LinkedList
+		   Queue: PriorityQueue, Dec<I>
+		   Set  : HashSet, LinkedHashSet, TreeSet->SortedSet<I>
+
+		   ArrayList vs LinkedList
+		   - index kullandığı için istediğin elemanı bulmak çok kolay
+		   - node yapısını kullanır(ilk bölümde datanın değeri, ikinci bölüm pointer)
+		     index kullanmadığı için elemanı bulmak zordur
+
+		   - bir elemanı çektiğinde geri kalan tüm indeksleri ayarlamak gerekiyor
+		   - eleman ekleme ve çıkarma çok kolay
+
+		   - eleman erişme O(1) || eleman arama O(n)
+		   - eleman erişme O(n) || eleman arama O(n)
+
+		   - memory overhead
+		     arraylist daha fazla memory kullanıyor -> indexleme yüzünden
+
+			** linkedlist ekleme çıkarma, arraylist arama, hashset ekleme arama -> performanslı
+
+		    HashSet vs TreeSet
+		    - tekrarlı eleman kabul edilmez
+
+		    - elemanı sıraya koymaz
+		    - elemanı doğal bir sıralamayla tutar ( o yüzden daha yavaş)
+		    * eğer hashsetin yavaşlığını istemiyorsam ama sıralı veri istiyorsam;
+		      elemanları hashset ile ekleyip, hashseti treesete dönüştürürüm
+
+		    HashSet vs LinkedHashSet
+		    - rastgele sırayla tutar-> sıralamayla zaman kaybetmez hızlıdır
+		    - ekleme sırasına göre tutar -> o yüzden daha yavaş
+
+		    --hashmap thread-safe değildir
+
+		    HashSet -> elamanları hashleyip hashtable da ki ilgili bucket a ekliyor
+		  		   sabit zamanda erişebiliyoruz
+		 */
+
+
+		/*
+		soap : statefull(önceki durum hakkında bilgi sahibi
+		       yavaş(daha geniş bant kullanır):sebebi xml
+		       daha güvenilir
+		rest : stateless
+			   daha hızlı(daha düşük bant genişliği):json
+
+		*Serileştirme, nesnenin durumunu bayt akışına dönüştürür ve bu akışı bir dosyaya yazar.
+		Nesne daha sonra bu bayt akışından geri okunur.
+		Bu yöntemle, nesnenin tüm durumu otomatik olarak korunur.
+
+		serilization  -> java objesinin farklı bir data formatına çevrilmesi
+		 				(bytelara çevrilmesi), (java objectini json tipine döndürmek)
+		 				çevirmeyi yaptıktan sonra depolarız(file,db,memory)
+		deserilization -> byte'ı java objesine çeviriyor
+
+		->redisten bir datayı okurken o serailzble değilse hata verir cunku redis byte byte okur
+		herkesin ortak okuyabileceği bir
+		dosya işlemlerinde onu okuyamazsın
+		 */
+
+
 	}
 }
