@@ -141,6 +141,16 @@ public class DesignpatternsApplication {
 		dosya işlemlerinde onu okuyamazsın
 		 */
 
+		/*
+		* sql-> datalar arası çok fazla ilişki varsa, ilişkileri yönetmem gerekiyorsa
+				verilerin önceden sınırları çizilmişse
+		* nosql -> daha hızlı ve daha ölçeklenebilir
+				   sürekli genişliyorsa daha esnek yapıda document base şeklinde tutulan
+	    db ler tercihim olur
+
+	    * ana sayfa fail oldu çok istek alan bi yer(circuit braker tanımlıyorsun)
+	    * şu kadar hatadan sonra default bir cevap dön-> ama arka tarafta belli periyotlarla servise istek yolla
+		* */
 
 	}
 }
