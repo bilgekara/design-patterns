@@ -2,6 +2,7 @@ package com.bilgeli.designpatterns;
 
 public class DesignpatternsApplication {
 	public static void main(String[] args) {
+		// outbox eklemesi yapılacak
 		/* INHERITANCE
 		 - reusable kodlar yazmamızı sağlıyor: kod tekrarını azaltıyor
 		 - modularity and organization: bir hiyerarşi sunar bize
